@@ -1,0 +1,192 @@
+<!-- <div class="jumbotron text-center">    
+    <a ui-sref=".list" class="btn btn-primary">List</a>
+    <a ui-sref=".paragraph" class="btn btn-danger">Paragraph</a>
+    
+</div> -->
+
+<div ui-view></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="row memberDetailsClass" style="height:500px;">
+                <div class="col-md-12" style="padding:1%">
+                    Login Details = {{logde | json}}<br><br>
+                    Registration Details = {{regde | json}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+            <div class="row memberDetailsClass">
+                <div class="col-md-12" style="padding:2%">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" id="register-tab" data-toggle="tab" href="#registerfor" role="tab" aria-controls="registerfor" aria-selected="false">SignUp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">SignIn</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade in" id="registerfor" role="tabpanel" aria-labelledby="registerforfor">
+                        <!-- <h3 class="text-center">Register</h3> -->
+                        
+                        <hr>
+                        <form class="needs-validation" name="regform" novalidate>
+                            <div class="form-row">
+                                <div class="col-md-12 xs-12">
+                                <label for="regfname">Full name <span style="color:red">*</span></label>
+                                <input type="text" ng-model="regde.first_name" class="form-control" id="regfname" placeholder="Enter Full Name" required>
+                                </div>
+                                <!-- <div class="col-md-6 xs-12">
+                                <label for="reglname">Last name</label>
+                                <input type="text" ng-model="regde.last_name" class="form-control" id="reglname" placeholder="Enter Last Name" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                </div> -->
+                                <div class="col-md-12 xs-12">
+                                    <label for="reglemailid">Email ID <span style="color:red">*</span>:</label>
+                                    <input type="email" ng-model="regde.email" class="form-control" id="reglemailid" placeholder="Enter Email ID" required>
+                                </div>
+                                <div class="col-md-6 xs-12">
+                                    <label for="reglpassword">Password <span style="color:red">*</span>:</label>
+                                    <input type="password" class="form-control" id="reglpassword" placeholder="Enter Password" required>
+                                </div>
+                                <div class="col-md-6 xs-12">
+                                    <label for="regconfirmpass">Confirm Password <span style="color:red">*</span>:</label>
+                                    <input type="password" ng-model="regde.passowrd" class="form-control" id="regconfirmpass" placeholder="Confirm Password" required>
+                                </div>
+                                <div class="col-md-12 xs-12">
+                                    <label for="regmobile">Mobile <span style="color:red">*</span>:</label>
+                                    <input type="number" ng-model="regde.mobile" class="form-control" id="regmobile" placeholder="Enter Mobile Number" required>
+                                    <small id="emailHelp" class="form-text text-muted">OTP will be sent to your mobile.</small>
+                                </div>
+                                <div class="col-md-12 xs-12">
+                                    <label for="regmobileotp">OTP <span style="color:red">*</span>:</label>
+                                    <input type="number" class="form-control" id="regmobileotp" placeholder="Enter OTP" required>
+                                </div>
+                                <!-- <div class="col-md-12 xs-12">
+                                    <label for="regpreaddr">Present Address <span style="color:red">*</span></label>
+                                    <textarea type="text" class="form-control" id="regpreaddr" placeholder="Enter Persent Address" required></textarea>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-12 xs-12">
+                                    <label for="regpermanaddr">Permanent Address</label>
+                                    <textarea type="text" class="form-control" id="regpermanaddr" placeholder="Enter Permanent Address" required></textarea>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div> -->
+                                
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label style="font-size:12px;" class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                </div>
+                            </div>
+                            <!-- <button class="btn btn-primary" ng-click="regreset();">Reset</button> -->
+                            <button class="btn btn-primary" type="submit" ng-click="regupdate();">SignUp</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade in show active" id="login" role="tabpanel" aria-labelledby="login">
+                            <!-- <h3 class="text-center">Login</h3> -->
+                            <!-- <div class="btngroupclass">
+                                <button class="fbBtnClass">facebook</button>
+                                <button class="gmailBtnClass">Gmail</button>
+                            </div> -->
+                            <br>
+                            <div class="container-fluid">
+                            <form class="needs-validation" name="loginform" novalidate>
+                                <!-- <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" checked name="inlineRadioOptions" id="emailid" value="emailid">
+                                    <label class="form-check-label">Email ID</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="username" value="username">
+                                    <label class="form-check-label">User Name</label>
+                                </div> -->
+                                <div class="form-row">
+                                    <div class="col-md-12 xs-12" id="inputEmialId">
+                                        <label for="validationCustom01">Email ID <span style="color:red">*</span> :</label>
+                                        <input type="email" ng-model="logde.email" class="form-control" id="validationCustom01" placeholder="Enter Email ID" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-md-12 xs-12" id="inputUserName" style="display:none;">
+                                        <label for="validationCustom02">User Name <span style="color:red">*</span>:</label>
+                                        <input type="text" ng-model="logde.uname" class="form-control" id="validationCustom02" placeholder="Enter User Name" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div> -->
+                                    <!-- <div class="col-md-12 xs-12">
+                                        <label for="validationCustom04">OTP :</label>
+                                        <input type="number" min="3" max="4"  class="form-control" id="validationCustom04" placeholder="Enter OTP" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-12 xs-12">
+                                        <label for="validationCustom03">Password <span style="color:red">*</span>:</label>
+                                        <input type="password" ng-model="logde.password" class="form-control" id="validationCustom03" placeholder="Enter Password" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-md-4 mb-3">
+                                    <label for="validationCustomUsername">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                        <div class="invalid-feedback">
+                                        Please choose a username.
+                                        </div>
+                                    </div>
+                                    </div> -->
+                                </div>
+                                <!-- <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                    <label for="validationCustom03">City</label>
+                                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid city.
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                    <label for="validationCustom04">State</label>
+                                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid state.
+                                    </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                    <label for="validationCustom05">Zip</label>
+                                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid zip.
+                                    </div>
+                                    </div>
+                                </div> -->
+                                <br>
+                                <!-- <button class="btn btn-primary" ng-click="reset()" type="submit">Reset</button> -->
+                                <button class="btn btn-primary" ng-click="update()" type="submit">Signin</button><span class="forgotspan"><a href="#">Forgot Password?</a></span>
+                                <p style="font-size:12px;padding-top:1%;">New To JobPortal? <a style="font-weight:600" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a></p>    
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 col-xs-12"></div>
+    </div>
+</div>

@@ -1,0 +1,662 @@
+
+<div class="row">
+
+    <div class="col-sm-6">
+        <div ui-view="columnOne"></div>
+    </div>
+    
+    
+    <div class="col-sm-6">
+        <div ui-view="columnTwo"></div>
+    </div>
+
+    
+</div>
+
+<div class="container-fluid" style="margin-top:2%;">
+    <div class="row">
+        <div class="col-md-2 col-xs-0"></div>
+        <div class="col-md-7 col-xs-12">
+        <form>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 style="color:#007bff">Personal Details</h4>
+                        <hr>
+                        <div id="">
+                                <div class="form-group row">
+                                    <label for="perfname" class="col-sm-3 col-form-label text-right">First Name <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.fname" class="form-control" id="perfname" placeholder="Enter First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="perlname" class="col-sm-3 col-form-label text-right">Last Name :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.lname" class="form-control" id="perlname" placeholder="Enter Last Name">
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group row formmarginclass">
+                                    <label for="peremailid" class="col-sm-3 col-form-label text-right">Email ID <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="peremailid" placeholder="Enter Email ID">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="perspassword" class="col-sm-3 col-form-label text-right">Password <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="perspassword" placeholder="Password">
+                                    </div>
+                                </div> -->
+                                <div class="form-group row formmarginclass">
+                                    <label for="gender" class="col-sm-3 col-form-label text-right">Gender <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <div style="margin-top:1.5%;">
+                                            <label class="radio-inline" style="width:15%;">
+                                                <input type="radio" ng-model="aftrregde.Gender" name="gender"><span style="font-size:14px;padding-left:5%;">Male</span>
+                                            </label>
+                                            <label class="radio-inline" style="width:15%;">
+                                                <input type="radio" ng-model="aftrregde.Gender" name="gender"><span style="font-size:14px;padding-left:5%;">Female</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="perdob" class="col-sm-3 col-form-label text-right">DOB <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <input type="date" ng-model="aftrregde.dob" class="form-control" id="perdob" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="peroriginallocation" class="col-sm-3 col-form-label text-right">Location <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.location" class="form-control" id="peroriginallocation" placeholder="Enter Original Location">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="perjoblocation" class="col-sm-3 col-form-label text-right">Job Location <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.job_location" class="form-control" id="perjoblocation" placeholder="Enter Job Location">
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group row formmarginclass">
+                                    <label for="peruploadres" class="col-sm-3 col-form-label text-right">Upload Resume <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-4">
+                                        <div class="fileUpload btn btn-info uploadBtn">
+                                            <!-- <span>Upload Resume</span> -->
+                                            <!--<input type="file" class="" />
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="form-group row">
+                                    <div class="col-sm-10">
+                                    <button class="btn btn-primary" style="border-radius:0px;">Save</button>
+                                    </div>
+                                </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="margin-top:2%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 ng-click="IsVisible=IsVisible ? false : true;" style="cursor:pointer;color:#007bff;width:40%;">Education Details</h5>
+                        <hr>
+                        <div ng-show="IsVisible" class="animated fadeInDown">
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="tenth-tab" data-toggle="tab" href="#tenth" role="tab" aria-controls="tenth" aria-selected="false">Tenth Class Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="inter-tab" data-toggle="tab" href="#inter" role="tab" aria-controls="inter" aria-selected="false">Intermediate Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="graduation-tab" data-toggle="tab" href="#graduation" role="tab" aria-controls="graduation" aria-selected="true">Graduation Details</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade" id="graduation" role="tabpanel" aria-labelledby="graduation-tab">
+                                
+                                <div class="form-group row formmarginclass">
+                                    <label for="educollegename" class="col-sm-3 col-form-label text-right">College Name <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.College_Name" class="form-control" id="educollegename" placeholder="Enter College Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="edutypeofcollege" class="col-sm-3 col-form-label text-right">Type Of College <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="edutypeofcollege" ng-model="aftrregde.College_Type" class="custom-select">
+                                            <option selected disabled>Select Type of College</option>
+                                            <option value="autonomous">Autonomous</option>
+                                            <option value="dimmed">DIMMED</option>
+                                            <option value="naac">NAAC</option>
+                                            <option value="typecollegeothers">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="edutypeofgrad" class="col-sm-3 col-form-label text-right">Type Of Graduation <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="edutypeofgrad" ng-model="aftrregde.College_Grad" class="custom-select">
+                                            <option selected disabled>Select Type of Graduation</option>
+                                            <option value="btechbe">B.Tech/B.E</option>
+                                            <option value="bsc">BSC</option>
+                                            <option value="typegradothers">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="edubranch" class="col-sm-3 col-form-label text-right">Branch<span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="edubranch" ng-model="aftrregde.Branch" class="custom-select">
+                                            <option selected disabled>Select Branch</option>
+                                            <option value="btechbe">CSE</option>
+                                            <option value="bsc">ECE</option>
+                                            <option value="bsc">EEE</option>
+                                            <option value="bsc">EIE</option>
+                                            <option value="bsc">MECH</option>
+                                            <option value="bsc">CIVIL</option>
+                                            <option value="bsc">Chemical</option>
+                                            <option value="typegradothers">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="edupercentages" class="col-sm-3 col-form-label text-right">Percentage <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" ng-model="aftrregde.percentage" style="padding:2%;" class="form-control" id="edupercentages" placeholder="Enter Percentage">
+                                    </div>
+                                    <div class="col-sm-1 text-mute">or</div>
+                                    <div class="col-sm-4">
+                                        <input type="text" ng-model="aftrregde.cgpa" style="padding:2%;" class="form-control" id="educgpa" placeholder="Enter CGPA">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="eduyop" class="col-sm-3 col-form-label text-right">YOP<span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="eduyop" ng-model="aftrregde.yop" class="custom-select">
+                                            <option selected disabled>Select YOP</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="before2014">before2014</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group row formmarginclass">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-primary float-right" style="border-radius:0px;">Save</button>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="tab-pane fade" id="inter" role="tabpanel" aria-labelledby="inter-tab">
+                                <div class="form-group row formmarginclass">
+                                    <label for="eduinterboard" class="col-sm-3 col-form-label text-right">Board <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="eduinterboard" ng-model="aftrregde.board" class="custom-select">
+                                            <option selected disabled>Select Board Of Inter</option>
+                                            <option value="cbsc">CBSC</option>
+                                            <option value="inter">INTER</option>
+                                            <option value="icsc">ICSC</option>
+                                            <option value="typeinterboardothers">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="edustateofboard" class="col-sm-3 col-form-label text-right">State of Board <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" ng-model="aftrregde.state_board" class="form-control" id="edustateofboard" placeholder="Enter State Of Board">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                        <label for="eduyop" class="col-sm-3 col-form-label text-right">YOP<span style="color:red">*</span> :</label>
+                                        <div class="col-sm-9">
+                                            <select id="eduyop" ng-model="aftrregde.inter_yop" class="custom-select">
+                                                <option selected disabled>Select YOP</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="before2014">before2014</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="eduintermajors" class="col-sm-3 col-form-label text-right">Majors <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <select id="eduintermajors" ng-model="aftrregde.major" class="custom-select">
+                                            <option selected disabled>Select Major</option>
+                                            <option value="maths">Maths</option>
+                                            <option value="science">Science</option>
+                                            <option value="typemajorothers">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="eduintertotalmarks" class="col-sm-3 col-form-label text-right">Total Marks <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-9">
+                                        <input type="number" ng-model="aftrregde.total_marks" class="form-control" id="eduintertotalmarks" placeholder="Enter Inter Total Marks">
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="eduinteryearmarks" class="col-sm-3 col-form-label text-right">Math Marks <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" ng-model="aftrregde.math1st_year" style="padding:2%;" class="form-control" id="eduinter1styear" placeholder="Enter 1st Year Math Marks">
+                                    </div>
+                                    <div class="col-sm-1 text-mute"></div>
+                                    <div class="col-sm-4">
+                                        <input type="text" ng-model="aftrregde.math2st_year" style="padding:2%;" class="form-control" id="eduinter2ndyear" placeholder="Enter 2nd Year Math Marks">
+                                    </div>
+                                </div>                            
+                                <!-- <div class="form-group row formmarginclass">
+                                    <div class="col-sm-12">
+                                    <button class="btn btn-primary float-right" style="border-radius:0px;">Save</button>
+                                </div>
+                                </div> -->
+                            </div>
+                            <div class="tab-pane fade show active" id="tenth" role="tabpanel" aria-labelledby="tenth-tab">
+                                    <div class="form-group row formmarginclass">
+                                        <label for="edutenthboard" class="col-sm-3 col-form-label text-right">Board <span style="color:red">*</span> :</label>
+                                        <div class="col-sm-9">
+                                            <select id="edutenthboard" ng-model="aftrregde.tenth_board" class="custom-select">
+                                                <option selected disabled>Select Board Of Inter</option>
+                                                <option value="cbsc">CBSC</option>
+                                                <option value="inter">SSC</option>
+                                                <option value="icsc">ICSC</option>
+                                                <option value="typeinterboardothers">Others</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row formmarginclass">
+                                        <label for="edu10thstateofboard" class="col-sm-3 col-form-label text-right">State of Board <span style="color:red">*</span> :</label>
+                                        <div class="col-sm-9">
+                                        <input type="text" ng-model="aftrregde.tenth_state_board" class="form-control" id="edu10thstateofboard" placeholder="Enter State Of Board">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row formmarginclass">
+                                            <label for="eduyop" class="col-sm-3 col-form-label text-right">YOP<span style="color:red">*</span> :</label>
+                                            <div class="col-sm-9">
+                                                <select id="eduyop" ng-model="aftrregde.tenth_yop" class="custom-select">
+                                                    <option selected disabled>Select YOP</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2016</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="before2014">before2014</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    <div class="form-group row formmarginclass">
+                                        <label for="edutenthtotalmarks" class="col-sm-3 col-form-label text-right">Total Marks <span style="color:red">*</span> :</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" ng-model="aftrregde.tenth_total_marks" class="form-control" id="edutenthtotalmarks" placeholder="Enter SSC Total Marks">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row formmarginclass">
+                                        <label for="edutenthmathmarks" class="col-sm-3 col-form-label text-right">Math Marks <span style="color:red">*</span> :</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" ng-model="aftrregde.tenth_math_marks" class="form-control" id="edutenthmathmarks" placeholder="Enter SSC Math Marks">
+                                        </div>
+                                    </div>                            
+                                    <!-- <div class="form-group row formmarginclass">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-primary float-right"   style="border-radius:0px;">Save</button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="margin-top:2%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 ng-click="IsVisibleforTr = IsVisibleforTr ? false : true;" style="cursor:pointer;color:#007bff;width:30%;">Training/Certification</h5>
+                        <hr>
+                        <div ng-show="IsVisibleforTr">
+                            <p>Are you trained on any other technology apart from your college CRT program?</p>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="crtyes=true" name="techyesno"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                    </label>
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="crtyes=false" name="techyesno"><span style="font-size:14px;padding-left:5%;">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="techshodiv" ng-show="crtyes">
+                                <div class="form-group row formmarginclass">
+                                    <label for="othertech1" class="col-sm-2 col-form-label text-right">1.Technology :</label>
+                                    <div class="col-sm-4">
+                                        <select id="othertech1" 
+                                        ng-model="aftrregde.tech" class="custom-select">
+                                            <option selected disabled>Select Technology</option>
+                                            <option value="c">C</option>
+                                            <option value="c++">C++</option>
+                                            <option value="java">JAVA</option>
+                                            <option value="html">HTML</option>
+                                            <option value="typetech1others">Others</option>
+                                        </select>
+                                    </div>
+                                    <label for="otherduration1" class="col-sm-2 col-form-label text-right">Duration <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-3">
+                                        <input type="number" style="padding:3%;" class="form-control" id="otherduration1" placeholder="Duration(No.of days)">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button onclick="addTech();" style="cursor:pointer;" title="Add one more">+</button>
+                                    </div>
+                                </div>
+                                <div id="addingDiv"></div>
+                            </div>
+                            <p class="formmarginclass">Any Certification?</p>
+                            <div class="form-group row formmarginclass">
+                                <div class="col-sm-12">
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="certifiyes=true" ng-model="certyesno" name="certfyesno"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                    </label>
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="certifiyes=false" ng-model="certyesno" name="certfyesno"><span style="font-size:14px;padding-left:5%;">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass" ng-show="certifiyes">
+                                <label for="educertyesno" class="col-sm-5 col-form-label text-left">Mention Your Certification Details <span style="color:red">*</span> :</label>
+                                <div class="col-sm-6">
+                                <textarea ng-model="aftrregde.cert_description" style="border-radius:0px;font-size:14px;" type="text" class="form-control" id="educertdetails" placeholder="Enter Certification Details"></textarea>
+                                </div>
+                                <div class="col-sm-1">
+                                    <button onclick="addTech();" style="cursor:pointer;" title="Add one more">+</button>
+                                </div>
+                            </div>
+                            <p class="formmarginclass">Any Internship?</p>
+                            <div class="form-group row formmarginclass">
+                                <div class="col-sm-12">
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="internyes=true" name="internyesno"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                    </label>
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="internyes=false" name="internyesno"><span style="font-size:14px;padding-left:5%;">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="internyesno" ng-show="internyes">
+                                <div class="form-group row formmarginclass">
+                                    <label for="interncompanyname" class="col-sm-3 col-form-label text-left">Company Name <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.company_name" class="form-control" id="interncompanyname" placeholder="Enter Company Name">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="interncompanyurl" class="col-sm-3 col-form-label text-left">Company URL <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.company_url" class="form-control" id="interncompanyurl" placeholder="Enter Company URL">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="interncompanylocation" class="col-sm-3 col-form-label text-left">Company Location <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.company_location" class="form-control" id="interncompanylocation" placeholder="Enter Company Location">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="interntech" class="col-sm-3 col-form-label text-left">Technology :</label>
+                                    <div class="col-sm-3">
+                                        <select id="interntech" ng-model="aftrregde.company_tech" class="custom-select">
+                                            <option selected disabled>Select Technology</option>
+                                            <option value="autonomous">C</option>
+                                            <option value="dimmed">C++</option>
+                                            <option value="naac">JAVA</option>
+                                            <option value="naac">HTML</option>
+                                            <option value="typetech1others">Others</option>
+                                        </select>
+                                    </div>
+                                    <label for="internduration" class="col-sm-2 col-form-label text-left">Duration <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-3">
+                                        <input type="number" ng-model="aftrregde.duration" style="padding:3%;" class="form-control" id="internduration" placeholder="Duration(No.of days)">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+
+
+
+                                <div class="form-group row formmarginclass">
+                                    <label for="internsalstip" class="col-sm-3 col-form-label text-left">Salary/Stipend <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.salstipnd" class="form-control" id="internsalstip" placeholder="Enter Salary/Stipend">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button onclick="addTech();" style="cursor:pointer;" title="Add one more">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="formmarginclass">Any Placements in Campus?</p>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="placedyes=true" name="placedyesno"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                    </label>
+                                    <label class="radio-inline" style="width:15%;">
+                                        <input type="radio" ng-click="placedyes=false" name="placedyesno"><span style="font-size:14px;padding-left:5%;">No</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="placedyesno" ng-show="placedyes">
+                                <div class="form-group row formmarginclass">
+                                    <label for="placedcompanyname" class="col-sm-3 col-form-label text-left">Company Name <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.plac_company_name" class="form-control" id="placedcompanyname" placeholder="Enter Company Name">
+                                    </div>
+                                    <div class="col-sm-1">
+                                       
+                                    </div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="placedcompanyurl" class="col-sm-3 col-form-label text-left">Company URL <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.plac_company_url" class="form-control" id="placedcompanyurl" placeholder="Enter Company URL">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="placedcompanylocation" class="col-sm-3 col-form-label text-left">Company Location <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.plac_company_location" class="form-control" id="placedcompanylocation" placeholder="Enter Company Location">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="placeddateofjoin" class="col-sm-3 col-form-label text-left">Expected Date of Joining <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.plac_doj" class="form-control" id="placeddateofjoin" placeholder="Enter Company Location">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+                                <div class="form-group row formmarginclass">
+                                    <label for="tech" class="col-sm-3 col-form-label text-left">Technology :</label>
+                                    <div class="col-sm-3">
+                                        <select id="tech" ng-model="aftrregde.plac_tech" class="custom-select">
+                                            <option selected disabled>Select Technology</option>
+                                            <option value="autonomous">C</option>
+                                            <option value="dimmed">C++</option>
+                                            <option value="naac">JAVA</option>
+                                            <option value="naac">HTML</option>
+                                            <option value="typetech1others">Others</option>
+                                        </select>
+                                    </div>
+                                    <label for="duration" class="col-sm-2 col-form-label text-left">Duration <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-3">
+                                        <input type="number" ng-model="aftrregde.plac_duration" style="padding:3%;" class="form-control" id="duration" placeholder="Duration(No.of days)">
+                                    </div>
+                                    <div class="col-sm-1"></div>
+                                </div>
+
+
+
+                                <div class="form-group row formmarginclass">
+                                    <label for="placedsalary" class="col-sm-3 col-form-label text-left">Minimum Monthly Salary(Rs.) <span style="color:red">*</span> :</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" ng-model="aftrregde.plac_company_sal" class="form-control" id="placedsalary" placeholder="Enter Salary">
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button onclick="addTech();" style="cursor:pointer;" title="Add one more">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group row">
+                                <div class="col-sm-12">
+                                <button class="btn btn-primary float-right" style="margin-top:1%;border-radius:0px;">Save</button>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid" style="margin-top:2%;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 id="hideshowdesiredjob" ng-click="desiredjob=desiredjob ? false : true" style="cursor:pointer;color:#007bff;width:30%;">Desired Job</h5>
+                        <hr>
+                        <div id="educationdesired" ng-show="desiredjob">
+                        <div class="form-group row formmarginclass">
+                            <label for="desiredskills" class="col-sm-3 col-form-label text-left">Skills :</label>
+                            <div class="col-sm-9">
+                                <select id="desiredskills" ng-model="aftrregde.desir_tech" class="custom-select">
+                                    <option selected disabled>Select Technology</option>
+                                    <option value="c">C</option>
+                                    <option value="c++">C++</option>
+                                    <option value="java">JAVA</option>
+                                    <option value="html">HTML</option>
+                                    <option value="skillsothers">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row formmarginclass">
+                            <label for="desiredjobtype" class="col-sm-3 col-form-label text-left">Job Type :</label>
+                            <div class="col-sm-9">
+                                <select id="desiredjobtype" ng-model="aftrregde.desir_job_type" class="custom-select">
+                                    <option selected disabled>Select Job Type</option>
+                                    <option value="fulltime">Full Time</option>
+                                    <option value="parttime">Part Time</option>
+                                    <option value="contract">Contract</option>
+                                    <option value="jobtypeothers">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row formmarginclass">
+                            <label for="desiredjob" class="col-sm-3 col-form-label text-left">Desired Job :</label>
+                            <div class="col-sm-9">
+                                <select id="desiredjob" ng-model="aftrregde.desir_job" class="custom-select">
+                                    <option selected disabled>Select Desired Job</option>
+                                    <option value="core">Core</option>
+                                    <option value="software">Software</option>
+                                    <option value="any">Any</option>
+                                    <option value="desiredjobothers">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row formmarginclass">
+                            <label for="desiredsalary" class="col-sm-3 col-form-label text-left">Salary :</label>
+                            <div class="col-sm-9">
+                                <label class="checkbox-inline" style="width:25%;">
+                                    <input type="checkbox" ng-model="aftrregde.desir_sal_10k" name="placedyesno"><span style="font-size:14px;padding-left:5%;">LessThan 10000</span>
+                                </label>
+                                <label class="checkbox-inline" style="width:25%;">
+                                    <input type="checkbox" ng-model="aftrregde.desir_sal_15k" name="placedyesno"><span style="font-size:14px;padding-left:5%;">10000-15000</span>
+                                </label>
+                                <label class="checkbox-inline" style="width:25%;">
+                                    <input type="checkbox" ng-model="aftrregde.desir_sal_20k" name="placedyesno"><span style="font-size:14px;padding-left:5%;">15000-20000</span>
+                                </label>
+                                <label class="checkbox-inline" style="width:25%;">
+                                    <input type="checkbox" ng-model="aftrregde.desir_sal_more20k" name="placedyesno"><span style="font-size:14px;padding-left:5%;">MoreThan 20000</span>
+                                </label>
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                        </div>
+                        <p class="formmarginclass">Are you interested to sign a bond?</p>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label class="radio-inline" style="width:15%;">
+                                    <input type="radio" name="bondyesno" ng-click="bondyes=true"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                </label>
+                                <label class="radio-inline" style="width:15%;">
+                                    <input type="radio" name="bondyesno" ng-click="bondyes=false"><span style="font-size:14px;padding-left:5%;">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="bonddiv" ng-show="bondyes">
+                            <div class="form-group row formmarginclass">
+                                <label for="onlybond" class="col-sm-3 col-form-label text-left">1. Only Bond <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <div style="margin-top:1.5%;">
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" ng-model="aftrregde.desir_bond_only" name="onlybond"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                        </label>
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" ng-model="aftrregde.desir_bond_only" name="onlybond"><span style="font-size:14px;padding-left:5%;">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="certificate" class="col-sm-3 col-form-label text-left">2. Bond Along with Certificates <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <div style="margin-top:1.5%;">
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" ng-model="aftrregde.desir_bondyesno" name="certificate"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                        </label>
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" ng-model="aftrregde.desir_bondyesno" name="certificate"><span style="font-size:14px;padding-left:5%;">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="desiredhowmany" class="col-sm-3 col-form-label text-left">3. How many years :</label>
+                                <div class="col-sm-9">
+                                    <select id="desiredhowmany" ng-model="aftrregde.desir_bond_only" class="custom-select">
+                                        <option selected disabled>Select how many years</option>
+                                        <option value="lessthan1yr">LessThan 1year</option>
+                                        <option value="1yrto2yr">1year-2year</option>
+                                        <option value="morethan2yrs">MoreThan 2years</option>
+                                    </select>
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary float-left" style="margin-top:5%;border-radius:0px;">Submit</button>
+                </div>
+            </div>
+            <hr>
+        </form><br><br>
+        </div>
+        <div class="col-md-3 col-xs-12">
+            Data:{{aftrregde | json}}
+        </div>
+    </div>
+</div>

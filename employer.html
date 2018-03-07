@@ -1,0 +1,165 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 col-xs-0"></div>
+        <div class="col-md-7 col-xs-0">
+            <h2 class="text-center">Employer</h2>
+            <form>
+                <h5>Post a Job</h5>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group row formmarginclass">
+                                <label for="edutypeofgrad" class="col-sm-3 col-form-label text-right">Type Of Graduation <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <select id="edutypeofgrad" class="custom-select">
+                                        <option selected disabled>Select Type of Graduation</option>
+                                        <option value="btechbe">B.Tech/B.E</option>
+                                        <option value="bsc">BSC</option>
+                                        <option value="typegradothers">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="percentages" class="col-sm-3 col-form-label text-right">Percentage <span style="color:red">*</span> :</label>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control p-1" id="10thper" placeholder="10th">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control p-1" id="interper" placeholder="12th">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control p-1" id="ugper" placeholder="U.G">
+                                </div>
+                                <div class="col-sm-2">
+                                    <input type="number" class="form-control p-1" id="pgug" placeholder="P.G">
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="trainedfre" class="col-sm-3 col-form-label text-right">Trained Fresher <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <div style="margin-top:1.5%;">
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="trainedfre"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                        </label>
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="trainedfre"><span style="font-size:14px;padding-left:5%;">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="empjobtype" class="col-sm-3 col-form-label text-right">Type of Job <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <select id="empjobtype" class="custom-select">
+                                        <option selected disabled>Select Job Type</option>
+                                        <option value="fulltime">Full Time</option>
+                                        <option value="parttime">Part Time</option>
+                                        <option value="contract">Contract</option>
+                                        <option value="jobtypeothers">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="empjoblocation" class="col-sm-3 col-form-label p-1 text-right">Job Location <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control p-1" id="empjoblocation" placeholder="Enter Job Location">
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="empyop" class="col-sm-3 col-form-label text-right">Year Of Pass <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <select id="empyop" class="custom-select">
+                                        <option selected disabled>Select Year Of Pass</option>
+                                        <option value="2018">2019</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2014">2014</option>
+                                        <option value="before2014">Before 2014</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="empsalary" class="col-sm-3 col-form-label text-right">Salary <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <select id="empsalary" class="custom-select">
+                                        <option selected disabled>Select Salary Type</option>
+                                        <option value="beforepro">Before Probation Period</option>
+                                        <option value="afterpro">After Probation Period</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="empmentionsal" class="col-sm-3 col-form-label text-right">Mention Salary(Lpa) <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control p-1" id="empmentionsal" placeholder="Enter Salary(Ex:2.4)">
+                                </div>
+                            </div>
+                            <br>
+                            <p class="formmarginclass">Are you interested for bond?</p>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label class="radio-inline" style="width:15%;">
+                                    <input type="radio" ng-click="empbondyes=true" name="bondyesno"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                </label>
+                                <label class="radio-inline" style="width:15%;">
+                                    <input type="radio" ng-click="empbondyes=false" name="bondyesno"><span style="font-size:14px;padding-left:5%;">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div ng-show="empbondyes">
+                            <div class="form-group row formmarginclass">
+                                <label for="onlybond" class="col-sm-3 col-form-label text-left">1. Only Bond <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <div style="margin-top:1.5%;">
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="onlybond"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                        </label>
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="onlybond"><span style="font-size:14px;padding-left:5%;">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="certificate" class="col-sm-3 col-form-label text-left">2. Certificates <span style="color:red">*</span> :</label>
+                                <div class="col-sm-9">
+                                    <div style="margin-top:1.5%;">
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="certificate"><span style="font-size:14px;padding-left:5%;">Yes</span>
+                                        </label>
+                                        <label class="radio-inline" style="width:15%;">
+                                            <input type="radio" name="certificate"><span style="font-size:14px;padding-left:5%;">No</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row formmarginclass">
+                                <label for="desiredjobtype" class="col-sm-3 col-form-label text-left">3. How many years :</label>
+                                <div class="col-sm-9">
+                                    <select id="desiredjobtype" class="custom-select">
+                                        <option selected disabled>Select how many years</option>
+                                        <option value="lessthan1yr">LessThan 1year</option>
+                                        <option value="1yrto2yr">1year-2year</option>
+                                        <option value="morethan2yrs">MoreThan 2years</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary float-left" style="margin-top:5%;border-radius:0px;">Submit</button>
+                    </div>
+                </div>
+                <hr>
+            </form>
+            
+        </div>
+        <div class="col-md-3 col-xs-0"></div>
+    </div>
+</div>

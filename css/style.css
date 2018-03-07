@@ -1,0 +1,107 @@
+body
+{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container-fluid,.row
+{
+    margin:0px;
+    padding:0px;
+}
+.memberDetailsClass
+{
+    margin:2%;border:1px solid #ccc;
+}
+.fbBtnClass
+{
+    padding:1% 5%;
+    cursor:pointer;
+    border:1px solid #29487d !important;
+    outline:none;
+    float:left;
+    background-color:#29487d !important;
+    color:#fff;
+}
+.form-group label
+{
+    font-size:14px;
+}
+.custom-select
+{
+    font-size:14px;
+    border-radius:0px;
+    padding:1% !important;
+}
+#educationdiv .nav-tabs{
+    color: #495057;
+}
+#educationdiv .nav-tabs .nav-link.active {
+    color: #28a745;
+    background-color: #fff;
+    border-color:#fff;
+    border-bottom:2px solid #28a745;
+}
+.uploadBtn
+{
+    border-radius:0px;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 1%;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.form-group input
+{
+    padding:1%;
+    font-size:14px;
+    border-radius:0px;
+}
+.formmarginclass
+{
+    margin-top: 1%;
+}
+.forgotspan
+{
+    font-size:12px;
+    padding-left: 2%;
+    font-weight:600;
+}
+.gmailBtnClass
+{
+    padding:1% 5%;
+    cursor:pointer;
+    float:right;
+    border:1px solid #d14836 !important;
+    outline:none;
+    background-color:#d14836 !important;
+    color:#fff;
+}
+.btngroupclass
+{
+    width:40%;position:relative;margin-top:3%;
+}
+.form-row input
+{
+    font-size:12px;
+    border-radius:0px;
+    color: initial;
+}
+.form-row input,label
+{
+    font-size:12px;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
